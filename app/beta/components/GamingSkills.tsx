@@ -1,0 +1,39 @@
+const skills = [
+  { category: "FRONTEND", icon: "⚔️", items: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Redux Toolkit", "React Query", "Vite"] },
+  { category: "BACKEND", icon: "🛡️", items: ["Node.js", "Express.js", "PHP", "Laravel", "Slim Framework", "REST APIs"] },
+  { category: "AI & SEARCH", icon: "🧠", items: ["OpenAI API", "GPT Integration", "RAG", "Ollama", "Prompt Engineering", "Semantic Search", "Elasticsearch"] },
+  { category: "DATABASE", icon: "💾", items: ["MySQL", "Redis", "MongoDB"] },
+  { category: "AUTH & SECURITY", icon: "🔐", items: ["JWT", "OAuth", "NextAuth"] },
+  { category: "TOOLS", icon: "🔧", items: ["Git", "Bitbucket", "Jira", "Nginx", "Ubuntu", "Postman"] },
+];
+
+export default function GamingSkills() {
+  return (
+    <section id="skills" className="py-24 px-6 grid-bg">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-10">
+          <span className="text-green-500/60 font-mono text-sm">// SECTION_03</span>
+          <h2 className="text-3xl font-bold font-mono text-green-400 neon-text">SKILL_TREE</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          {skills.map(({ category, icon, items }) => (
+            <div key={category} className="border border-green-500/20 bg-black/60 rounded p-5 hover:border-green-400/60 transition-colors group">
+              <div className="flex items-center gap-2 mb-4">
+                <span>{icon}</span>
+                <h3 className="font-mono text-sm font-bold text-green-400 tracking-widest group-hover:neon-text">{category}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {items.map((skill) => (
+                  <span key={skill} className="font-mono text-xs px-2 py-1 border border-green-500/30 text-green-300/70 hover:border-green-400 hover:text-green-400 transition-colors cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

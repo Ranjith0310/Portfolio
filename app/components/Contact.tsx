@@ -5,9 +5,18 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    setError("");
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    if (res.ok) setSent(true);
+    else setError("Failed to send. Please try again.");
   };
 
   return (
@@ -44,13 +53,13 @@ export default function Contact() {
             <button type="submit" className="bg-indigo-600 hover:bg-indigo-500 transition-colors py-3 rounded-lg font-semibold">
               Send Message
             </button>
+            {error && <p className="text-red-400 text-sm">{error}</p>}
           </form>
         )}
 
         <div className="mt-10 flex gap-6 text-gray-400">
-          <a href="https://github.com" target="_blank" className="hover:text-indigo-400 transition-colors">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" className="hover:text-indigo-400 transition-colors">LinkedIn</a>
-          <a href="mailto:ranjith@example.com" className="hover:text-indigo-400 transition-colors">Email</a>
+          <a href="https://github.com/Ranjith0310" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">GitHub</a>
+          <a href="mailto:ranjithriyas48@gmail.com" className="hover:text-indigo-400 transition-colors">Email</a>
         </div>
       </div>
     </section>
