@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-
-const links = ["About", "Skills", "Projects", "Contact"];
+import { navLinks } from "../../lib/data";
 
 export default function GamingNavbar() {
   const [open, setOpen] = useState(false);
@@ -15,7 +14,7 @@ export default function GamingNavbar() {
         </div>
 
         <ul className="hidden md:flex gap-8">
-          {links.map((l) => (
+          {navLinks.map((l) => (
             <li key={l}>
               <a href={`#${l.toLowerCase()}`} className="font-mono text-sm text-green-400/70 hover:text-green-400 transition-colors hover:neon-text tracking-widest uppercase">
                 &gt; {l}
@@ -36,7 +35,7 @@ export default function GamingNavbar() {
 
       {open && (
         <ul className="md:hidden flex flex-col gap-3 px-6 pb-4 border-t border-green-500/20">
-          {links.map((l) => (
+          {navLinks.map((l) => (
             <li key={l}>
               <a href={`#${l.toLowerCase()}`} className="font-mono text-green-400/70 hover:text-green-400 text-sm tracking-widest uppercase" onClick={() => setOpen(false)}>
                 &gt; {l}

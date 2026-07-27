@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-
-const links = ["About", "Skills", "Projects", "Contact"];
+import { navLinks } from "../lib/data";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -12,7 +11,7 @@ export default function Navbar() {
         <span className="text-xl font-bold text-indigo-400">Ranjith R</span>
 
         <ul className="hidden md:flex gap-8">
-          {links.map((l) => (
+          {navLinks.map((l) => (
             <li key={l}>
               <a href={`#${l.toLowerCase()}`} className="text-gray-300 hover:text-indigo-400 transition-colors">
                 {l}
@@ -28,7 +27,7 @@ export default function Navbar() {
 
       {open && (
         <ul className="md:hidden flex flex-col gap-4 px-6 pb-4">
-          {links.map((l) => (
+          {navLinks.map((l) => (
             <li key={l}>
               <a href={`#${l.toLowerCase()}`} className="text-gray-300 hover:text-indigo-400" onClick={() => setOpen(false)}>
                 {l}

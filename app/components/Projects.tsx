@@ -1,30 +1,4 @@
-const projects = [
-  {
-    title: "AI-Powered Enterprise Document Search",
-    description: "Intelligent document search and knowledge management using OpenAI APIs, RAG, Elasticsearch, and Ollama.",
-    tech: ["OpenAI API", "RAG", "Elasticsearch", "Ollama"],
-  },
-  {
-    title: "CRM System",
-    description: "Full-featured Customer Relationship Management system built with React.js and PHP.",
-    tech: ["React.js", "PHP", "MySQL", "REST APIs"],
-  },
-  {
-    title: "Electronic Point of Sale (EPOS)",
-    description: "EPOS application with real-time inventory, sales tracking, and payment integrations.",
-    tech: ["React.js", "Node.js", "Stripe", "MySQL"],
-  },
-  {
-    title: "Fusion Kitchen E-commerce",
-    description: "E-commerce platform with cart, Stripe/PayPal/Klarna payments, and third-party delivery integrations.",
-    tech: ["React.js", "PHP", "Stripe", "PayPal", "Klarna"],
-  },
-  {
-    title: "Travel Insurance Consultants",
-    description: "Insurance platform with policy management, quote generation, and secure user authentication.",
-    tech: ["React.js", "Laravel", "MySQL", "JWT"],
-  },
-];
+import { projects } from "../lib/data";
 
 export default function Projects() {
   return (

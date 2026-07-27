@@ -1,11 +1,4 @@
-const skills = [
-  { category: "Frontend", items: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Redux Toolkit", "React Query", "Vite"] },
-  { category: "Backend", items: ["Node.js", "Express.js", "PHP", "Laravel", "Slim Framework", "REST APIs"] },
-  { category: "AI & Search", items: ["OpenAI API", "GPT Integration", "RAG", "Ollama", "Prompt Engineering", "Semantic Search", "Elasticsearch"] },
-  { category: "Database", items: ["MySQL", "Redis", "MongoDB"] },
-  { category: "Auth & Security", items: ["JWT", "OAuth", "NextAuth"] },
-  { category: "Tools", items: ["Git", "Bitbucket", "Jira", "Nginx", "Ubuntu", "Postman"] },
-];
+import { skills } from "../lib/data";
 
 export default function Skills() {
   return (

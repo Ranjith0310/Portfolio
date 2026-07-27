@@ -1,44 +1,5 @@
-function getYearsOfExperience() {
-  const start = new Date(2021, 1);
-  const now = new Date();
-  const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
-  return (months / 12).toFixed(1);
-}
-
-const experience = [
-  {
-    role: "Associate Project Manager",
-    company: "Novac Technology Solutions Pvt. Ltd.",
-    period: "Apr 2026 – Present",
-    points: [
-      "Lead project planning, execution, and delivery for enterprise web applications.",
-      "Coordinate with clients, stakeholders, UI/UX designers, and development teams.",
-      "Oversee AI-powered solutions using OpenAI APIs, Elasticsearch, RAG, and Ollama.",
-      "Manage sprint planning, task allocation, and timelines using Agile methodologies.",
-    ],
-  },
-  {
-    role: "Senior Software Engineer",
-    company: "Novac Technology Solutions Pvt. Ltd.",
-    period: "Jun 2024 – Apr 2026",
-    points: [
-      "Developed scalable enterprise web apps using React.js, Next.js, Node.js, and Laravel.",
-      "Integrated OpenAI APIs to deliver AI-powered application features.",
-      "Implemented secure authentication using JWT and NextAuth.",
-      "Improved application performance using Redis caching.",
-    ],
-  },
-  {
-    role: "Web Developer",
-    company: "Fusion Innovative",
-    period: "Feb 2021 – Jun 2024",
-    points: [
-      "Developed CRM, EPOS, and e-commerce applications using React.js and PHP.",
-      "Integrated Stripe, PayPal, Klarna, and third-party delivery services.",
-      "Built reusable UI components and REST APIs.",
-    ],
-  },
-];
+import { getYearsOfExperience } from "../lib/utils";
+import { experience } from "../lib/data";
 
 export default function About() {
   return (

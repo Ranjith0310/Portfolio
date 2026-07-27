@@ -1,9 +1,4 @@
-function getYearsOfExperience() {
-  const start = new Date(2021, 1); // Feb 2021
-  const now = new Date();
-  const years = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
-  return (years / 12).toFixed(1);
-}
+import { getYearsOfExperience } from "../lib/utils";
 
 export default function Hero() {
   return (
