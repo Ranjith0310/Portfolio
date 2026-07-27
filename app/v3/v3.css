@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+
+/* Gradient text */
+.v3-grad {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section fade-in */
+@keyframes v3FadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.v3-fade { animation: v3FadeUp 0.6s ease both; }
+.v3-fade-1 { animation: v3FadeUp 0.6s 0.1s ease both; }
+.v3-fade-2 { animation: v3FadeUp 0.6s 0.2s ease both; }
+.v3-fade-3 { animation: v3FadeUp 0.6s 0.35s ease both; }
+.v3-fade-4 { animation: v3FadeUp 0.6s 0.5s ease both; }
+
+/* Card */
+.v3-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.v3-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 16px 48px rgba(139, 92, 246, 0.15);
+}
+
+/* Pill */
+.v3-pill {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #a5b4fc;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* Gradient button */
+.v3-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  transition: opacity 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.v3-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.v3-btn-outline {
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+  transition: border-color 0.2s, color 0.2s;
+  display: inline-block;
+}
+.v3-btn-outline:hover { border-color: rgba(139,92,246,0.5); color: white; }
+
+/* Section label */
+.v3-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #818cf8;
+}
+
