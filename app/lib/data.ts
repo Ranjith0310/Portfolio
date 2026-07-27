@@ -1,3 +1,5 @@
+export const summary = `Senior Full Stack Developer with {exp}+ years of experience designing and delivering scalable enterprise web applications. Experienced in integrating Generative AI solutions using OpenAI APIs, RAG, Elasticsearch, and Ollama to build intelligent document search, AI-powered chatbots, and enterprise knowledge management solutions.`;
+
 export const navLinks = ["About", "Skills", "Projects", "Contact"];
 
 export const projects = [
@@ -13,13 +15,18 @@ export const projects = [
   },
   {
     title: "Electronic Point of Sale (EPOS)",
-    description: "EPOS application with real-time inventory, sales tracking, and payment integrations.",
+    description: "EPOS application with real-time inventory, sales tracking, order tracking, driver tracking, and payment integrations.",
     tech: ["React.js", "Node.js", "Stripe", "MySQL"],
   },
   {
     title: "Fusion Kitchen E-commerce",
     description: "E-commerce platform with cart, Stripe/PayPal/Klarna payments, and third-party delivery integrations.",
     tech: ["React.js", "PHP", "Stripe", "PayPal", "Klarna"],
+  },
+  {
+    title: "Dynamic Page Builder",
+    description: "A drag-and-drop page builder that lets users create websites dynamically by adding, editing, and reordering components like content blocks, color themes, and images in real time.",
+    tech: ["React.js", "Node.js", "MySQL", "REST APIs"],
   },
   {
     title: "Travel Insurance Consultants",
@@ -29,10 +36,10 @@ export const projects = [
 ];
 
 export const skills = [
-  { category: "Frontend", items: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Redux Toolkit", "React Query", "Vite"] },
-  { category: "Backend", items: ["Node.js", "Express.js", "PHP", "Laravel", "Slim Framework", "REST APIs"] },
+  { category: "Frontend", items: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Context API", "React Query", "Vite"] },
+  { category: "Backend", items: ["Node.js", "Express.js", "PHP", "Laravel", "REST APIs"] },
   { category: "AI & Search", items: ["OpenAI API", "GPT Integration", "RAG", "Ollama", "Prompt Engineering", "Semantic Search", "Elasticsearch"] },
-  { category: "Database", items: ["MySQL", "Redis", "MongoDB"] },
+  { category: "Database", items: ["MySQL", "MSSQL", "Redis", "MongoDB"] },
   { category: "Auth & Security", items: ["JWT", "OAuth", "NextAuth"] },
   { category: "Tools", items: ["Git", "Bitbucket", "Jira", "Nginx", "Ubuntu", "Postman"] },
 ];

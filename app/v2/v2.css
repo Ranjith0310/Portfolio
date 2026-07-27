@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+
+/* ── Background orbs ── */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+.orb-1 { width: 600px; height: 600px; background: #7c3aed; top: -200px; left: -200px; animation: drift 12s ease-in-out infinite alternate; }
+.orb-2 { width: 500px; height: 500px; background: #db2777; bottom: -150px; right: -150px; animation: drift 15s ease-in-out infinite alternate-reverse; }
+.orb-3 { width: 400px; height: 400px; background: #0ea5e9; top: 40%; left: 40%; animation: drift 10s ease-in-out infinite alternate; }
+
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(40px, 30px) scale(1.08); }
+}
+
+/* ── Glass card ── */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.glass-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glass-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(124, 58, 237, 0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+/* ── Gradient text ── */
+.grad-text {
+  background: linear-gradient(135deg, #a78bfa, #f472b6, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.grad-text-2 {
+  background: linear-gradient(135deg, #f472b6, #fb923c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Bold underline accent ── */
+.bold-underline {
+  position: relative;
+  display: inline-block;
+}
+.bold-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #7c3aed, #db2777);
+  border-radius: 2px;
+}
+
+/* ── Fade up animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease forwards; }
+.fade-up-1 { animation: fadeUp 0.7s 0.1s ease both; }
+.fade-up-2 { animation: fadeUp 0.7s 0.25s ease both; }
+.fade-up-3 { animation: fadeUp 0.7s 0.4s ease both; }
+.fade-up-4 { animation: fadeUp 0.7s 0.55s ease both; }
+
+/* ── Pill badge ── */
+.pill {
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: #c4b5fd;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background 0.2s, border-color 0.2s;
+}
+.pill:hover {
+  background: rgba(124, 58, 237, 0.3);
+  border-color: rgba(167, 139, 250, 0.6);
+}
+
+/* ── Gradient border button ── */
+.grad-btn {
+  position: relative;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  border-radius: 12px;
+  padding: 1px;
+  display: inline-block;
+}
+.grad-btn-inner {
+  background: #0f0a1e;
+  border-radius: 11px;
+  padding: 12px 28px;
+  font-weight: 600;
+  color: white;
+  transition: background 0.3s;
+}
+.grad-btn:hover .grad-btn-inner {
+  background: transparent;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: 8px;
+}
